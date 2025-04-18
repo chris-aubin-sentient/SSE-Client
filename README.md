@@ -1,4 +1,4 @@
-# SSE Client
+# Simple SSE Client
 
 > [!WARNING]
 > **This python package is currently in beta and will likely change. It is not yet ready for production use.**
@@ -8,13 +8,13 @@ A lightweight SSE client that uses the httpx package based on [httpx-sse](https:
 
 ## Installation
 ```bash
-pip install sse-client
+pip install simple-sse-client
 ```
 
 ## Usage
 #### Synchronous
 ```python
-from sse_client import stream
+from simple_sse_client import stream
 
 for event in stream("https://example.com/sse"):
     print(event)
@@ -22,7 +22,7 @@ for event in stream("https://example.com/sse"):
 
 #### Asynchronous
 ```python
-from sse_client import async_stream
+from simple_sse_client import async_stream
 
 async for event in async_stream("https://example.com/sse"):
     print(event)
