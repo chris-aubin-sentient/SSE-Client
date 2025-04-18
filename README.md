@@ -1,8 +1,10 @@
-# SSE-Client
-A lightweight SSE client that uses the httpx package based on [httpx-sse](https://github.com/florimondmanca/httpx-sse).
+# SSE Client
 
 > [!WARNING]
 > **This python package is currently in beta and will likely change. It is not yet ready for production use.**
+
+A lightweight SSE client that uses the httpx package based on [httpx-sse](https://github.com/florimondmanca/httpx-sse).
+
 
 ## Installation
 ```bash
@@ -26,7 +28,7 @@ async for event in async_stream("https://example.com/sse"):
     print(event)
 ```
 
-#### Stream/ Async Stream Interface
+#### Interface
 The `stream` and `async_stream` functions follow the [httpx.request()](https://www.python-httpx.org/api/) interface.
 
 ```python
@@ -37,12 +39,12 @@ stream(method, url, *, params=None, content=None, data=None, files=None, json=No
 async_stream(method, url, *, params=None, content=None, data=None, files=None, json=None, headers=None, cookies=None, auth=None, proxy=None, timeout=Timeout(timeout=5.0), follow_redirects=False, verify=True, trust_env=True)
 ```
 
-Both functions connect to an SSE endpoint and yield ServerSentEvent objects.
+Both functions connect to an SSE endpoint and yield `ServerSentEvent` objects.
 
 Parameters:
 
-- `method` - HTTP method for the new Request object: GET, OPTIONS, HEAD, POST, PUT, PATCH, or DELETE.
-- `url` - URL for the new Request object.
+- `method` - HTTP method (GET, OPTIONS, HEAD, POST, PUT, PATCH, or DELETE).
+- `url` - URL.
 - `params` - (Optional) Query parameters to include in the URL, as a string, dictionary, or sequence of two-tuples.
 - `content` - (Optional) Binary content to include in the body of the request, as bytes or a byte iterator.
 - `data` - (Optional) Form data to include in the body of the request, as a dictionary.
