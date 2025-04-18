@@ -7,6 +7,9 @@ A lightweight SSE client that uses the httpx package based on [httpx-sse](https:
 
 
 ## Installation
+> [!NOTE]
+> **These instructions are for unix-based systems (i.e. MacOS, Linux). Before you proceed, make sure that you have installed `python` and `pip`. If you have not, follow [these](https://packaging.python.org/en/latest/tutorials/installing-packages/) instructions to do so.**
+
 ```bash
 pip install simple-sse-client
 ```
